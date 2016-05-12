@@ -36,9 +36,9 @@ class ValidationResult
      * Add an error
      * 
      * @param string $message
-     * @param mixed  ...$args  Arguments to insert into the message
+     * @param mixed  $args  Arguments to insert into the message
      */
-    public function addError($message, ...$args)
+    public function addError($message, $args = null)
     {
         $message = $this->translate($message);
         if (!empty($args)) $message = vsprintf($message, $args);
@@ -132,13 +132,13 @@ class ValidationResult
      * Factory method for failed validation
      * 
      * @param string $message
-     * @param mixed  ...$args  Arguments to insert into the message
+     * @param mixed  $args  Arguments to insert into the message
      * @return static
      */
-    public static function error($message, ...$args)
+    public static function error($message, $args = null)
     {
         $validation = new static();
-        $validation->addError($message, ...$args);
+        $validation->addError($message, $args);
         
         return $validation;
     }

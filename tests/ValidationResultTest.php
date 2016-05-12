@@ -40,7 +40,7 @@ class ValidationResultTest extends \PHPUnit_Framework_TestCase
     public function testAddErrorWithArgs()
     {
         $validation = new ValidationResult();
-        $validation->addError("Colors %s and %s for %03d", "red", "blue", 20);
+        $validation->addError("Colors %s and %s for %03d", ["red", "blue", 20]);
         
         $this->assertEquals(["Colors red and blue for 020"], $validation->getErrors());
     }
@@ -109,7 +109,7 @@ class ValidationResultTest extends \PHPUnit_Framework_TestCase
         ValidationResult::$translate = [$translator, 'translate'];
     
         $error = new ValidationResult();
-        $error->addError("Color %s", "red");
+        $error->addError("Color %s", ["red"]);
 
         $validation = new ValidationResult();
         $validation->add($error, "error");
@@ -189,7 +189,7 @@ class ValidationResultTest extends \PHPUnit_Framework_TestCase
     
     public function testErrorWithArgs()
     {
-        $validation = ValidationResult::error("Colors %s and %s for %03d", "red", "blue", 20);
+        $validation = ValidationResult::error("Colors %s and %s for %03d", ["red", "blue", 20]);
         
         $this->assertInstanceOf(ValidationResult::class, $validation);
         $this->assertEquals(["Colors red and blue for 020"], $validation->getErrors());
