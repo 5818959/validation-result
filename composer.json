@@ -1,21 +1,20 @@
 {
-    "name": "jasny/validation-result",
+    "name": "5818959/validation-result",
     "description": "A result object for validation",
     "keywords": ["validation"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Arnold Daniels",
-            "email": "arnold@jasny.net",
-            "homepage": "http://www.jasny.net"
+            "name": "Sergey S.",
+            "email": "5818959@gmail.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/jasny/validation-result/issues",
-        "source": "https://github.com/jasny/validation-result"
+        "issues": "https://github.com/5818959/validation-result/issues",
+        "source": "https://github.com/5818959/validation-result"
     },
     "require": {
-        "php": ">=5.6.0"
+        "php": ">=5.5.0"
     },
     "autoload": {
         "psr-4": {
