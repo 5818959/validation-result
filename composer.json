@@ -14,7 +14,7 @@
         "source": "https://github.com/5818959/validation-result"
     },
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
